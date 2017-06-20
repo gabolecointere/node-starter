@@ -1,0 +1,30 @@
+{
+  "name": "node-starter",
+  "version": "0.0.1",
+  "description": "Node Starter",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf build",
+    "build": "eslint src && npm run clean && webpack -p --config webpack.config.prod.js",
+    "start": "NODE_ENV=development webpack --watch --config webpack.config.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Lavieri",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.8.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "dependencies": {}
+}
